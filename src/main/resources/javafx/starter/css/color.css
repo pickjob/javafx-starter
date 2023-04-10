@@ -1,0 +1,31 @@
+@import "./fonts.css";
+@import "./material-design-colors.css";
+
+* {
+    -fx-font: 18px 'Fira Code SemiBold';
+}
+
+* {
+    -default-color-text: -fx-color-deepOrange-900;
+    -default-color-text-input: -fx-color-pink-500;
+    -default-color-text-prompt: -fx-color-grey-800;
+    -default-color-text-button: -fx-color-purple-A200;
+    -default-color-text-hyperlink: -fx-color-lightBlue-300;
+    -default-color-text-hyperlink-visited: derive(-default-color-text-hyperlink, -20%);
+
+    -default-color-icon: -fx-color-yellow-A200;
+    -default-color-icon-leading: -fx-color-deepPurple-A200;
+
+    -default-color-progress: -fx-color-lightGreen-A400;
+    -default-color-scroll-bar: #59585b;
+
+    -default-color-background: #0f111a;
+    -default-color-background-control: #2F3150;
+    -default-color-background-control-selected: derive(-default-color-background-control, -30%);
+    -default-color-background-input: #1E1C31;
+
+    -default-color-background-cell-even: #2B3035;
+    -default-color-background-cell-even-hover: derive(-default-color-background-cell-even, 10%);
+    -default-color-background-cell-odd: derive(-default-color-background-cell-even, -20%);
+    -default-color-background-cell-odd-hover: derive(-default-color-background-cell-odd, 10%);
+}

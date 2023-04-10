@@ -1,0 +1,51 @@
+/**
+ * JavaFx CSS:
+ *      @rule:
+ *          @import "name.css";
+ *          @font-face {...}
+ *      颜色函数：
+ *          derive( <color>, <number>%):
+ *              number > 0, 更亮
+ *              number < 0, 更暗
+ *      .root: Scene Root元素
+ *      常见元素设置:
+ *          javafx.scene.Node: 默认无 styleClass
+ *              伪类:
+ *                  disabled
+ *                  focused
+ *                  focus-visible
+ *                  focus-within
+ *                  hover
+ *                  pressed
+ *              CSS属性：
+ *                  -fx-rotate: 旋转
+ *                  -fx-scale-x -fx-scale-y -fx-scale-z: 放大缩小
+ *                  -fx-translate-x -fx-translate-y -fx-translate-z: 偏移
+ *          javafx.scene.layout.Region: 默认无 styleClass
+ *              -fx-background-color: 背景
+ *              -fx-border-color -fx-border-radius -fx-border-style -fx-border-width: 边框
+ *              -fx-padding: 间隔
+ *          javafx.scene.layout.FlowPane / GridPane / TilePane: 默认无 styleClass
+ *              -fx-hgap -fx-vgap: 间隔
+ *              -fx-alignment: 对齐
+ *          javafx.scene.layout.HBox / VBox: 默认无 styleClass
+ *              -fx-spacing: 间隔
+ *              -fx-alignment: 对齐
+ *          javafx.scene.control: 默认styleClass为类名
+ *              ComboBox: combo-box
+ *                  list-cell
+ *                  text-input
+ *                  combo-box-popup
+ *                      list-view
+ *                          list-cell
+ *              TextArea: text-area
+ *                  -fx-pref-column-count -fx-pref-row-count
+ *                  -fx-wrap-text: 自动换行
+ *                  scroll-panel
+ *                      content
+ *              TextInputControl:
+ *                  -fx-text-fill: 字体颜色
+ *                  -fx-prompt-text-fill: 提示字颜色
+ *                  -fx-highlight-fill: 高亮背颜色
+ *                  -fx-highlight-text-fill	: 高亮字颜色
+ */

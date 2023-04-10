@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<ScrollPane fx:controller="javafx.starter.showcase.ControlController"
+            xmlns:fx="http://javafx.com/fxml"
+            styleClass="scroll-pane">
+    <VBox fx:id="details" styleClass="v-box">
+    </VBox>
+    <stylesheets>
+        <URL value="@../../css/showcase/control.css"/>
+    </stylesheets>
+</ScrollPane>

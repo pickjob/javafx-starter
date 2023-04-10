@@ -1,0 +1,323 @@
+// Labeled
+//      -fx-underline: true | false
+//      -fx-wrap-text: true | false
+//      文字过长配置
+//      -fx-text-overrun: center-ellipsis | center-word-ellipsis | clip | ellipsis | leading-ellipsis | leading-word-ellipsis | word-ellipsis
+//      -fx-ellipsis-string: ...
+
+// Label
+.label {
+    -fx-text-fill: -default-color-text;
+}
+
+// TextField
+.text-field {
+    -fx-text-fill: -default-color-text-input;
+    -fx-prompt-text-fill: -default-color-text-prompt;
+    -fx-background-color: -default-color-background-input;
+}
+
+// PasswordField
+.password-field {
+}
+
+// TextArea
+.text-area {
+    -fx-text-fill: -default-color-text-input;
+    -fx-pref-row-count: 3;
+    -fx-pref-column-count: 40;
+    -fx-prompt-text-fill: -default-color-text-prompt;
+    -fx-background-color: -default-color-background;
+    -fx-wrap-text: true
+}
+.text-area .content {
+    -fx-background-color: -default-color-background-input;
+}
+
+// Button
+.button {
+    -fx-text-fill: -default-color-text-button;
+    -fx-background-color: -default-color-background-control;
+}
+.button:hover {
+    -fx-background-color: -default-color-background-control-selected;
+}
+
+// ToggleButton
+.toggle-button {
+    -fx-text-fill: -default-color-text-button;
+    -fx-background-color: -default-color-background-control;
+}
+.toggle-button:hover {
+    -fx-background-color: -default-color-background-control-selected;
+}
+
+// Hyperlink
+.hyperlink {
+    -fx-text-fill: -default-color-text-hyperlink;
+    -fx-underline: true;
+}
+.hyperlink:visited {
+    -fx-text-fill: -default-color-text-hyperlink-visited;
+    -fx-underline: true;
+}
+
+// RadioButton
+.radio-button {
+    -fx-text-fill: -default-color-text-button;
+}
+.radio-button .radio {
+    -fx-background-color: -default-color-background-control;
+}
+.radio-button:selected .radio .dot {
+    -fx-background-color: -default-color-icon;
+}
+
+// CheckBox
+.check-box {
+    -fx-text-fill: -default-color-text-button;
+}
+.check-box .box {
+    -fx-background-color: -default-color-background-control;
+}
+.check-box:selected .box .mark {
+    -fx-background-color: -default-color-icon;
+}
+
+// ProgressIndicator
+.progress-indicator {
+    -fx-progress-color: -default-color-progress;
+}
+
+// ProgressBar
+.progress-bar .track {
+    -fx-background-color: -default-color-background-control;
+}
+.progress-bar .bar {
+    -fx-background-color: -default-color-progress;
+}
+
+// Spinner
+.spinner .text-field {
+    -fx-alignment: center;
+}
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: -default-color-background-control;
+}
+.spinner .increment-arrow,
+.spinner .decrement-arrow {
+    -fx-background-color: -default-color-icon;
+}
+
+// Slider
+.slider .track {
+    -fx-background-color: -default-color-background-control;
+}
+.slider .thumb {
+    -fx-background-color: -default-color-icon;
+}
+
+// Pagination
+.pagination .left-arrow,
+.pagination .right-arrow {
+    -fx-background-color: -default-color-icon;
+}
+.pagination .number-button:selected {
+    -fx-background-color: -default-color-background-control-selected;
+}
+
+// ContextMenu
+.context-menu {
+    -fx-background-color: -default-color-background-control;
+}
+
+// Menu
+.menu {
+    -fx-background-color: -default-color-background-control;
+}
+
+// ChoiceBox
+.choice-box {
+    -fx-background-color: -default-color-background-control;
+}
+.choice-box .arrow {
+    -fx-background-color: -default-color-icon;
+}
+
+// ComboBox
+.combo-box,
+.combo-box .list-cell,
+.combo-box .arrow-button {
+    -fx-background-color: -default-color-background-control;
+}
+.combo-box .arrow {
+    -fx-background-color: -default-color-icon;
+}
+
+// DatePicker
+.date-picker {
+    -fx-background-color: -default-color-background;
+}
+.date-picker .arrow-button {
+    -fx-background-color: -default-color-background-control;
+}
+.date-picker .arrow {
+    -fx-background-color: -default-color-icon;
+}
+.date-picker .date-cell {
+    -fx-text-fill: -default-color-text;
+    -fx-background-color: -default-color-background-control;
+    -fx-border-color: -default-color-background-control;
+}
+.date-picker .date-cell:hover {
+    -fx-background-color: -default-color-background-control-selected;
+    -fx-border-color: -default-color-background-control-selected;
+}
+.date-picker-popup,
+.date-picker-popup .month-year-pane {
+    -fx-background-color: -default-color-background-control;
+}
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: -default-color-text;
+}
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+    -fx-background-color: -default-color-icon;
+}
+
+// IndexedCell
+.indexed-cell {
+    -fx-text-fill: -default-color-text;
+}
+
+// ListCell
+.list-cell {
+    -fx-alignment: center;
+}
+.list-cell:even {
+    -fx-background-color: -default-color-background-cell-even;
+}
+.list-cell:even:hover {
+    -fx-background-color: -default-color-background-cell-even-hover;
+}
+.list-cell:odd {
+    -fx-background-color: -default-color-background-cell-odd;
+}
+.list-cell:odd:hover {
+    -fx-background-color: -default-color-background-cell-odd-hover;
+}
+
+
+// ListView
+.list-view {
+    -fx-background-color: -default-color-background-control;
+}
+
+// TreeCell
+.tree-cell {
+    -fx-text-fill: -default-color-text;
+    -fx-indent: 1em;
+    -fx-background-color: -default-color-background;
+}
+.tree-cell:selected {
+    -fx-background-color: -default-color-background-control-selected;
+}
+.tree-cell .arrow {
+    -fx-background-color: -default-color-icon;
+}
+
+// ToolBar
+.tool-bar {
+    -fx-background-color: -default-color-background;
+}
+
+// MenuBar
+.menu-bar {
+    -fx-background-color: -default-color-background;
+}
+
+// ScrollBar
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: -default-color-background;
+}
+.scroll-bar .thumb {
+    -fx-background-color: -default-color-scroll-bar;
+}
+
+// TitledPane
+.titled-pane {
+    -fx-text-fill: -default-color-text;
+    -fx-background-color: -default-color-background;
+}
+.titled-pane .title,
+.titled-pane .content {
+    -fx-border-color: null;
+    -fx-background-color: -default-color-background;
+}
+.titled-pane:expanded .title {
+    -fx-background-color: -default-color-background-control-selected;
+}
+.titled-pane .title .arrow-button .arrow {
+    -fx-background-color: -default-color-icon;
+}
+
+// ScrollPane
+.scroll-pane {
+    -fx-fit-to-width: true;
+    -fx-fit-to-height: true;
+    -fx-pannable: true;
+}
+.scroll-pane .viewport {
+    -fx-background-color: -default-color-background;
+}
+
+// TabPane
+.tab-pane .tab-header-area .tab-header-background,
+.tab-pane .tab-header-area .control-buttons-tab .tab-down-button {
+    -fx-background-color: -default-color-background;
+}
+.tab-pane .tab-header-area .tab {
+    -fx-background-color: -default-color-background-control;
+}
+.tab-pane .tab-header-area .tab:selected {
+    -fx-background-color: -default-color-background-control-selected;
+}
+.tab-pane .tab-header-area .tab:selected .focus-indicator {
+    -fx-border-color: null;
+}
+.tab-pane .tab-header-area .tab .tab-label {
+    -fx-text-fill: -default-color-text;
+}
+.tab-pane .tab-header-area .tab .tab-close-button,
+.tab-pane .tab-header-area .control-buttons-tab .tab-down-button .arrow {
+    -fx-background-color: -default-color-icon;
+}
+
+// SplitPane
+.split-pane {
+    -fx-background-color: -default-color-background;
+}
+.split-pane .split-pane-divider {
+    -fx-background-color: -default-color-background-control;
+}
+
+// VBox
+.v-box {
+    -fx-spacing: 15px;
+    -fx-alignment: center;
+    -fx-background-color: -default-color-background;
+}
+
+// HBOX
+.h-box {
+    -fx-spacing: 15px;
+    -fx-alignment: center;
+    -fx-background-color: -default-color-background;
+}
+
+// FontIcon
+.ikonli-font-icon {
+    -fx-icon-color: -default-color-icon-leading;
+}
