@@ -1,0 +1,4 @@
+javafx.starter.transform.impl.Base64ITransformImpl
+javafx.starter.transform.impl.Base64UrlITransformImpl
+javafx.starter.transform.impl.UrlITransformImpl
+javafx.starter.transform.impl.JsonPrettyITransformImpl

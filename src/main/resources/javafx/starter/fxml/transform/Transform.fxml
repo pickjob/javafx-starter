@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Button?>
+<VBox fx:controller="javafx.starter.transform.TransformController"
+      xmlns:fx="http://javafx.com/fxml"
+      styleClass="v-box">
+    <TextArea fx:id="src" promptText="Put Your Original String Here" VBox.vgrow="ALWAYS"/>
+    <HBox styleClass="h-box">
+        <ComboBox fx:id="transType"/>
+        <CheckBox fx:id="reverse" />
+        <Label fx:id="reverseLabel" labelFor="$reverse" text="Reverse"/>
+        <Button fx:id="transform" text="Transform"/>
+    </HBox>
+    <TextArea fx:id="dest" editable="false" VBox.vgrow="ALWAYS"/>
+    <stylesheets>
+        <URL value="@../../css/transform/transform.css"/>
+    </stylesheets>
+</VBox>

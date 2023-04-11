@@ -35,7 +35,7 @@ import javafx.scene.control.ToolBar
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.starter.common.FxController
-import javafx.starter.utils.STYLE_CLASS_H_BOX
+import javafx.starter.common.STYLE_CLASS_H_BOX
 import mu.KotlinLogging
 import org.slf4j.Logger
 

@@ -306,6 +306,7 @@
 // VBox
 .v-box {
     -fx-spacing: 15px;
+    -fx-padding: 15px;
     -fx-alignment: center;
     -fx-background-color: -default-color-background;
 }
@@ -313,6 +314,7 @@
 // HBOX
 .h-box {
     -fx-spacing: 15px;
+    -fx-padding: 15px;
     -fx-alignment: center;
     -fx-background-color: -default-color-background;
 }

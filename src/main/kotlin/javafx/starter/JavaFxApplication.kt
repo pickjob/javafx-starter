@@ -8,9 +8,9 @@ import javafx.fxml.FXMLLoader
 import javafx.scene.Parent
 import javafx.scene.Scene
 import javafx.stage.Stage
-import javafx.starter.utils.CSS_COLOR
-import javafx.starter.utils.CSS_THEME
-import javafx.starter.utils.FXML_JAVAFX_APPLICATION
+import javafx.starter.common.CSS_COLOR
+import javafx.starter.common.CSS_THEME
+import javafx.starter.common.FXML_JAVAFX_APPLICATION
 import mu.KotlinLogging
 import org.slf4j.Logger
 

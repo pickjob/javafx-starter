@@ -2,7 +2,6 @@ package javafx.starter.application
 
 import javafx.application.Platform
 import javafx.beans.property.SimpleDoubleProperty
-import javafx.event.EventHandler
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
 import javafx.scene.Parent
@@ -12,9 +11,9 @@ import javafx.scene.control.Tab
 import javafx.scene.control.TabPane
 import javafx.scene.control.TreeItem
 import javafx.scene.control.TreeView
-import javafx.scene.input.MouseEvent
 import javafx.starter.common.FxController
-import javafx.starter.utils.FXML_SHOWCASE_CONTROL
+import javafx.starter.common.FXML_SHOWCASE_CONTROL
+import javafx.starter.common.FXML_TRANSFORM
 import mu.KotlinLogging
 import org.slf4j.Logger
 
@@ -42,9 +41,7 @@ class ApplicationController : FxController {
     override fun addHandler() {
         navigator.selectionModel.selectionMode = SelectionMode.SINGLE
         navigator.selectionModel.selectedItemProperty().addListener { _, _, newValue ->
-            if (!newValue.isExpanded) {
-                newValue.isExpanded = true
-            }
+            newValue.isExpanded = !newValue.isExpanded
             val selectedRecord = newValue.value
             logger.info("${selectedRecord.name} selected")
             if (selectedRecord.targetPath == "") return@addListener
@@ -60,6 +57,7 @@ class ApplicationController : FxController {
             tab.content = tabContent
             tab.userData = selectedRecord
             details.tabs.add(tab)
+            details.selectionModel.select(tab)
         }
         Platform.runLater {
             application.scene.widthProperty().addListener { _, _, _ ->
@@ -71,9 +69,17 @@ class ApplicationController : FxController {
     private var navigatorRecord: NavigatorRecord
 
     init {
+        val transform = NavigatorRecord("Transform", FXML_TRANSFORM, emptyList())
         val controlShowcase = NavigatorRecord("ControlShowCase", FXML_SHOWCASE_CONTROL, emptyList())
         val showcase = NavigatorRecord("ShowCase", "", listOf(controlShowcase))
-        navigatorRecord = NavigatorRecord("HOME", "", listOf(showcase))
+
+        navigatorRecord = NavigatorRecord(
+            "HOME", "",
+            listOf(
+                transform,
+                showcase,
+            )
+        )
     }
 
     private fun resizeNavigator() {
