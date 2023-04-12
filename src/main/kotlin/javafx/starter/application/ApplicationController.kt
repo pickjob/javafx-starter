@@ -11,10 +11,12 @@ import javafx.scene.control.Tab
 import javafx.scene.control.TabPane
 import javafx.scene.control.TreeItem
 import javafx.scene.control.TreeView
-import javafx.starter.common.FxController
+import javafx.starter.common.FXML_IKONLI
 import javafx.starter.common.FXML_SHOWCASE_CONTROL
 import javafx.starter.common.FXML_TRANSFORM
+import javafx.starter.common.FxController
 import mu.KotlinLogging
+import org.kordamp.ikonli.javafx.FontIcon
 import org.slf4j.Logger
 
 /**
@@ -33,6 +35,7 @@ class ApplicationController : FxController {
 
     override fun buildUI() {
         val rootItem = TreeItem(navigatorRecord)
+        rootItem.graphic = navigatorRecord.icon
         buildNavigator(rootItem)
         navigator.root = rootItem
         resizeNavigator()
@@ -51,6 +54,7 @@ class ApplicationController : FxController {
                     return@addListener
                 }
             }
+            val start = System.currentTimeMillis()
             val tab = Tab(selectedRecord.name)
             val loader = FXMLLoader(javaClass.getResource(selectedRecord.targetPath))
             val tabContent: Parent = loader.load()
@@ -58,6 +62,8 @@ class ApplicationController : FxController {
             tab.userData = selectedRecord
             details.tabs.add(tab)
             details.selectionModel.select(tab)
+            val end = System.currentTimeMillis()
+            logger.info("loading ${selectedRecord.name} elapse ${end - start} ")
         }
         Platform.runLater {
             application.scene.widthProperty().addListener { _, _, _ ->
@@ -69,14 +75,18 @@ class ApplicationController : FxController {
     private var navigatorRecord: NavigatorRecord
 
     init {
-        val transform = NavigatorRecord("Transform", FXML_TRANSFORM, emptyList())
-        val controlShowcase = NavigatorRecord("ControlShowCase", FXML_SHOWCASE_CONTROL, emptyList())
-        val showcase = NavigatorRecord("ShowCase", "", listOf(controlShowcase))
+        val transform = NavigatorRecord("Transform", FontIcon("si-convertio"), FXML_TRANSFORM, emptyList())
+        val ikonli = NavigatorRecord("Ikonli", FontIcon("si-torbrowser"), FXML_IKONLI, emptyList())
+        val controlShowcase =
+            NavigatorRecord("ControlShowCase", FontIcon("bxs-joystick-button"), FXML_SHOWCASE_CONTROL, emptyList())
+        val showcase = NavigatorRecord("ShowCase", FontIcon("cil-list-rich"), "", listOf(controlShowcase))
 
         navigatorRecord = NavigatorRecord(
-            "HOME", "",
+            "HOME", FontIcon("fas-home"),
+            "",
             listOf(
                 transform,
+                ikonli,
                 showcase,
             )
         )
@@ -91,6 +101,7 @@ class ApplicationController : FxController {
     private fun buildNavigator(root: TreeItem<NavigatorRecord>) {
         for (navigator in root.value.children) {
             val leaf = TreeItem<NavigatorRecord>(navigator)
+            leaf.graphic = navigator.icon
             root.children.add(leaf)
             buildNavigator(leaf)
         }

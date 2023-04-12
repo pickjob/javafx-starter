@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<VBox fx:controller="javafx.starter.ikonli.IkonliController"
+      xmlns:fx="http://javafx.com/fxml"
+      styleClass="v-box">
+    <HBox styleClass="h-box">
+        <Label text="Ikonli Icons:"/>
+        <TextField fx:id="keyWord" promptText="Key words" HBox.hgrow="ALWAYS" />
+    </HBox>
+    <ScrollPane>
+        <GridPane fx:id="cheatSheet" styleClass="grid-pane"/>
+    </ScrollPane>
+    <stylesheets>
+        <URL value="@../../css/ikonli/ikonli.css"/>
+    </stylesheets>
+</VBox>

@@ -86,7 +86,7 @@ class TransformController : FxController {
         FxCoroutineScope.launch {
             transType.selectionModel.selectedItemProperty()
                 .asFlow()
-                .throttleLatest(UI_DELAY)
+                .throttleLatest()
                 .filter {
                     it != null
                 }

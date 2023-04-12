@@ -70,7 +70,7 @@
     -fx-background-color: -default-color-background-control;
 }
 .radio-button:selected .radio .dot {
-    -fx-background-color: -default-color-icon;
+    -fx-background-color: -default-color-arrow;
 }
 
 // CheckBox
@@ -81,7 +81,7 @@
     -fx-background-color: -default-color-background-control;
 }
 .check-box:selected .box .mark {
-    -fx-background-color: -default-color-icon;
+    -fx-background-color: -default-color-arrow;
 }
 
 // ProgressIndicator
@@ -107,7 +107,7 @@
 }
 .spinner .increment-arrow,
 .spinner .decrement-arrow {
-    -fx-background-color: -default-color-icon;
+    -fx-background-color: -default-color-arrow;
 }
 
 // Slider
@@ -115,13 +115,13 @@
     -fx-background-color: -default-color-background-control;
 }
 .slider .thumb {
-    -fx-background-color: -default-color-icon;
+    -fx-background-color: -default-color-arrow;
 }
 
 // Pagination
 .pagination .left-arrow,
 .pagination .right-arrow {
-    -fx-background-color: -default-color-icon;
+    -fx-background-color: -default-color-arrow;
 }
 .pagination .number-button:selected {
     -fx-background-color: -default-color-background-control-selected;
@@ -142,7 +142,7 @@
     -fx-background-color: -default-color-background-control;
 }
 .choice-box .arrow {
-    -fx-background-color: -default-color-icon;
+    -fx-background-color: -default-color-arrow;
 }
 
 // ComboBox
@@ -152,7 +152,7 @@
     -fx-background-color: -default-color-background-control;
 }
 .combo-box .arrow {
-    -fx-background-color: -default-color-icon;
+    -fx-background-color: -default-color-arrow;
 }
 
 // DatePicker
@@ -163,7 +163,7 @@
     -fx-background-color: -default-color-background-control;
 }
 .date-picker .arrow {
-    -fx-background-color: -default-color-icon;
+    -fx-background-color: -default-color-arrow;
 }
 .date-picker .date-cell {
     -fx-text-fill: -default-color-text;
@@ -183,7 +183,7 @@
 }
 .date-picker-popup .spinner .button .left-arrow,
 .date-picker-popup .spinner .button .right-arrow {
-    -fx-background-color: -default-color-icon;
+    -fx-background-color: -default-color-arrow;
 }
 
 // IndexedCell
@@ -224,7 +224,7 @@
     -fx-background-color: -default-color-background-control-selected;
 }
 .tree-cell .arrow {
-    -fx-background-color: -default-color-icon;
+    -fx-background-color: none;
 }
 
 // ToolBar
@@ -260,7 +260,7 @@
     -fx-background-color: -default-color-background-control-selected;
 }
 .titled-pane .title .arrow-button .arrow {
-    -fx-background-color: -default-color-icon;
+    -fx-background-color: -default-color-arrow;
 }
 
 // ScrollPane
@@ -268,6 +268,7 @@
     -fx-fit-to-width: true;
     -fx-fit-to-height: true;
     -fx-pannable: true;
+    -fx-background-color: -default-color-background;
 }
 .scroll-pane .viewport {
     -fx-background-color: -default-color-background;
@@ -292,7 +293,7 @@
 }
 .tab-pane .tab-header-area .tab .tab-close-button,
 .tab-pane .tab-header-area .control-buttons-tab .tab-down-button .arrow {
-    -fx-background-color: -default-color-icon;
+    -fx-background-color: -default-color-arrow;
 }
 
 // SplitPane
@@ -305,21 +306,27 @@
 
 // VBox
 .v-box {
-    -fx-spacing: 15px;
+    -fx-spacing: 10px;
     -fx-padding: 15px;
-    -fx-alignment: center;
     -fx-background-color: -default-color-background;
 }
 
 // HBOX
 .h-box {
-    -fx-spacing: 15px;
-    -fx-padding: 15px;
+    -fx-spacing: 10px;
     -fx-alignment: center;
     -fx-background-color: -default-color-background;
 }
 
+// GridPane
+.grid-pane {
+    -fx-hgap: 5px;
+    -fx-vgap: 5px;
+    -fx-alignment: center;
+}
+
 // FontIcon
 .ikonli-font-icon {
-    -fx-icon-color: -default-color-icon-leading;
+    -fx-icon-size: 20px;
+    -fx-icon-color: -default-color-icon;
 }

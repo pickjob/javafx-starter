@@ -9,14 +9,16 @@
     -default-color-text: -fx-color-deepOrange-900;
     -default-color-text-input: -fx-color-pink-500;
     -default-color-text-prompt: -fx-color-grey-800;
-    -default-color-text-button: -fx-color-purple-A200;
+    -default-color-text-button: -fx-color-purple-A400;
     -default-color-text-hyperlink: -fx-color-lightBlue-300;
     -default-color-text-hyperlink-visited: derive(-default-color-text-hyperlink, -20%);
 
-    -default-color-icon: -fx-color-yellow-A200;
-    -default-color-icon-leading: -fx-color-deepPurple-A200;
+    -default-color-arrow: -fx-color-cyan-400;
 
-    -default-color-progress: -fx-color-lightGreen-A400;
+    -default-color-icon: -fx-color-lightGreen-700;
+
+    -default-color-progress: -fx-color-deepPurple-A200;
+
     -default-color-scroll-bar: #59585b;
 
     -default-color-background: #0f111a;
